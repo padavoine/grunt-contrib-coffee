@@ -127,6 +127,15 @@ module.exports = function(grunt) {
           'tmp/nest/1/coffee.js': ['test/fixtures/coffee1.coffee'],
           'tmp/nest/2/coffee.js': ['test/fixtures/coffee1.coffee']
         }
+      },
+      compileHttpRoot: {
+        options: {
+          sourceMap: true,
+          httpRootDir: 'tmp/'
+        },
+        files: {
+          'tmp/httpRoot/coffee.js': ['test/fixtures/coffee1.coffee']
+        }
       }
     },
 

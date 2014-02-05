@@ -202,4 +202,14 @@ exports.coffee = {
 
     test.done();
   },
+  compileHttpRoot: function(test) {
+    test.expect(1);
+
+    assertFileEquality(test,
+      'tmp/httpRoot/coffee.js',
+      'test/expected/httpRoot/coffee.js',
+      'Compilation with the httpRoot option should output the correct relative sourceMappingUrl');
+
+    test.done();
+  }
 };
